@@ -22,7 +22,8 @@ class HomeController extends BaseController
      */
     public function index(HomeRequest $request)
     {
-        $products = $this->homeService->getPaged();
+        Log::info($request);
+        $products = $this->homeService->getPaged($request);
         if ($products->count() <= 0) {
             return response()->json([
                 'code' => 1,

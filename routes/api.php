@@ -28,7 +28,7 @@ Route::group(['middleware' => 'api', 'prefix' => 'auth'], function () {
     Route::post('/change-pass', [AuthController::class, 'changePassWord']);
 });
 
-Route::prefix('home')->group(function () {
+Route::prefix('product')->group(function () {
     Route::get('/list', [HomeController::class, 'index'])->name('home');
     Route::get('/banner', [HomeController::class, 'getBanner'])->name('banner');
 });

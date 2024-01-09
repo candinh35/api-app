@@ -4,5 +4,5 @@ namespace App\interface;
 
 interface HomeInterface
 {
-    public function getPaged();
+    public function getPaged($request);
 }
